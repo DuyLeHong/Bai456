@@ -24,7 +24,9 @@ export default function App() {
           component={HomeScreen}
           options={{ title: 'Welcome' }}
         />
+
         <Stack.Screen name="Profile" component={ProfileScreen} />
+        
       </Stack.Navigator>
     </NavigationContainer>
   );

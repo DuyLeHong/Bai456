@@ -1,15 +1,31 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import React, { Component } from 'react'
+import { Button, Text, View } from 'react-native'
+import { withNavigation } from 'react-navigation';
 
-const ProfileScreen = ({navigation, route}) => {
-  return ( 
-    <View> 
-      <Text style={{fontSize: 50}} >ProfileScreen</Text>
+export class ProfileScreen extends Component {
 
-      <Text style={{fontSize: 50}}>Thông tin SV:
-       {route.params.name} - {route.params.tuoi} - {route.params.mssv}</Text>
-    </View>
-  )
+    constructor(props) {
+        super(props);
+    }
+
+
+    render() {
+
+        const { route } = this.props;
+
+        console.log(route)
+
+        return (
+            <View>
+                <Text style={{ fontSize: 50 }} >ProfileScreen</Text>
+
+                <Text style={{ fontSize: 50 }}>Thông tin SV:
+                    {route.params.name} - {route.params.tuoi} - {route.params.mssv}</Text>
+
+                <Button title="Back" onPress={() => { this.props.navigation.goBack() }} />
+            </View>
+        )
+    }
 }
 
-export default ProfileScreen
+export default withNavigation(ProfileScreen);
