@@ -34,7 +34,7 @@ const HomeScreen = ({ navigation }) => {
 
     let receiveData = (data) => {
         console.log(data)
-        alert(`Du lieu nhan ve: ${data}`)
+        alert(`Du lieu nhan ve: ${data.ten} - ${data.tuoi} - ${data.diemTB}`)
     }
 
     return (

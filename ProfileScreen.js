@@ -24,7 +24,13 @@ export class ProfileScreen extends Component {
 
                 <Button title="Back" onPress={() => {
 
-                    route.params.onGoBack('4567');
+                    let sv = {
+                        ten: 'Nguyen Minh Anh',
+                        tuoi: 20,
+                        diemTB: 9.5
+                    }
+                    route.params.onGoBack(sv);
+                    
                     this.props.navigation.goBack()
                 }
                 } />
