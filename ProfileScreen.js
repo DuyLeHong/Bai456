@@ -22,7 +22,12 @@ export class ProfileScreen extends Component {
                 <Text style={{ fontSize: 50 }}>Thông tin SV:
                     {route.params.name} - {route.params.tuoi} - {route.params.mssv}</Text>
 
-                <Button title="Back" onPress={() => { this.props.navigation.goBack() }} />
+                <Button title="Back" onPress={() => {
+
+                    route.params.onGoBack('4567');
+                    this.props.navigation.goBack()
+                }
+                } />
             </View>
         )
     }

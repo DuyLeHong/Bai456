@@ -32,6 +32,11 @@ const HomeScreen = ({ navigation }) => {
 
     const [rerender, setRerender] = useState(true);
 
+    let receiveData = (data) => {
+        console.log(data)
+        alert(`Du lieu nhan ve: ${data}`)
+    }
+
     return (
         <SafeAreaView>
             <View style={styles.container}>
@@ -84,8 +89,13 @@ const HomeScreen = ({ navigation }) => {
 
                 </View>
 
-                <Button title='Chuyển màn hình' onPress={() => {
-                    navigation.navigate('Profile', { name: 'Long', tuoi: 20, mssv: 'PH11131' })
+                <Button title='Chuyển màn hình 1' onPress={() => {
+                    navigation.navigate('Profile', { name: 'Long', tuoi: 20, mssv: 'PH11131', onGoBack: receiveData })
+
+                }} />
+
+                <Button title='Chuyển màn hình 2' onPress={() => {
+                    navigation.navigate('MovieScreen')
 
                 }} />
             </View>

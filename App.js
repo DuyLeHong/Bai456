@@ -8,6 +8,8 @@ import { NavigationContainer } from '@react-navigation/native';
 
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
+import MovieScreen from './MovieScreen';
+
 
 
 
@@ -26,6 +28,8 @@ export default function App() {
         />
 
         <Stack.Screen name="Profile" component={ProfileScreen} />
+
+        <Stack.Screen name="MovieScreen" component={MovieScreen} />
         
       </Stack.Navigator>
     </NavigationContainer>
