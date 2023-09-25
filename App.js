@@ -9,6 +9,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import MovieScreen from './MovieScreen';
+import PhotoScreen from './PhotoScreen';
 
 
 
@@ -31,6 +32,9 @@ export default function App() {
 
         <Stack.Screen name="MovieScreen" component={MovieScreen} />
         
+        <Stack.Screen name="PhotoScreen" component={PhotoScreen} />
+
+
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -30,8 +30,14 @@ export class ProfileScreen extends Component {
                         diemTB: 9.5
                     }
                     route.params.onGoBack(sv);
-                    
+
                     this.props.navigation.goBack()
+                }
+                } />
+
+                <Button title="Go to Screen 3" onPress={() => {
+                    
+                    this.props.navigation.navigate('PhotoScreen')
                 }
                 } />
             </View>
