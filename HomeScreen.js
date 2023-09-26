@@ -2,15 +2,7 @@ import { View, StyleSheet, Text, SafeAreaView, FlatList, TouchableOpacity, Butto
 import React from 'react'
 import { useState } from 'react';
 
-const styles = StyleSheet.create({
-    container: {
-    },
-    item: {
-        padding: 10,
-        fontSize: 18,
-        height: 44,
-    },
-});
+import styles from './styles';
 
 var i = 0;
 

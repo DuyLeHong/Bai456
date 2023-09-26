@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import { Button, Text, View } from 'react-native'
 import { withNavigation } from 'react-navigation';
+import View2 from './View2';
+import View1 from './View1';
+
 
 export class ProfileScreen extends Component {
 
@@ -40,6 +43,10 @@ export class ProfileScreen extends Component {
                     this.props.navigation.navigate('PhotoScreen')
                 }
                 } />
+
+                <View1 data='Text 1'/>
+
+                <View2 data='Text 2'/>
             </View>
         )
     }
